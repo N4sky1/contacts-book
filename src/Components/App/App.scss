@@ -1,0 +1,10 @@
+@import '../../index.scss';
+.app {
+    max-width: 1200px;
+    margin:0 auto;
+    h1 {
+        margin: 40px 30px;
+        text-align: center;
+        font-family: $font-family;
+    }
+}

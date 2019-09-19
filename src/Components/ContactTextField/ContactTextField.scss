@@ -1,0 +1,35 @@
+@import '../../index.scss';
+.text-field {
+    margin-top: 15px;
+    h3 {
+        font-size: 17px;
+        margin:0;
+        font-family: $font-family;
+    }
+}
+.text-field__input-wrap {
+    display: flex;
+    justify-content: flex-end;
+    img {
+      width:auto;
+      height: 20px;  
+      margin-left:10px;
+      cursor:pointer;
+    }
+}
+.change .text-field__text {
+    border: 1px solid gray;
+}
+.text-field__text {
+    border: none;
+    color: $text-color;
+    width:70%;
+    height: 25px;
+    display: block;
+    margin-right: auto;
+    padding:0 5px;
+    box-sizing: border-box;
+}
+input.text-field__text::placeholder {
+        color: $text-color;
+    }
