@@ -15,11 +15,9 @@ export default class ContactList extends React.Component {
   checkLocalStorage = () => {
     if (localStorage.getItem('peopleList')) {
       let returnObj = JSON.parse(localStorage.getItem('peopleList'))
-      this.setState(({peopleList}) => { 
-          return {
+      this.setState({
             peopleList:returnObj
-          }
-        })
+          })
     } else {
       this.FetchService
         .getAllPeople()
@@ -27,11 +25,7 @@ export default class ContactList extends React.Component {
           let serialObj = JSON.stringify(peopleList);
           localStorage.setItem('peopleList', serialObj)
 
-          this.setState(({peopleList}) => {
-            return {
-              peopleList
-            }
-          })
+          this.setState({peopleList})
         })
     }
   }
